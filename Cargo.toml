@@ -1,0 +1,16 @@
+[package]
+name = "rust-editor"
+version = "0.1.0"
+authors = ["DaniSancas <lord.sancas@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+repository = "https://github.com/DaniSancas/rust-editor"
+license = "MIT"
+license-file = "LICENSE"
+description = "CLI text editor writen in Rust (learning purpose only)"
+keywords = ["text", "editor"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
