@@ -5,7 +5,7 @@ use lib::print_welcome;
 
 fn main() {
     // Init state
-    let mut current_mode: &mut Mode = &mut Mode::CommandMode;
+    let mut current_mode = Mode::CommandMode;
     let mut buffer: String = String::new();
 
     // Print welcome message

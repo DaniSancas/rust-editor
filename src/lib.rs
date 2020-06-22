@@ -21,16 +21,16 @@ pub fn print_welcome(mode: &Mode) {
     # The instructions (like this) are prepended by the \"#\" character.\n\
     # To see the commands type \"h\" or \"help\" + Enter on Command mode to display the full list.\n\
 ");
-    self::print_current_mode(&mode);
+    self::print_current_mode(mode);
 }
 
 fn print_current_mode(mode: &Mode) {
-    println!("# You are currently in {}.", &mode.to_string());
+    println!("# You are currently in {}.", mode.to_string());
 }
 
 fn print_help(mode: &Mode) {
     println!("<Help text placeholder>");
-    self::print_current_mode(&mode);
+    self::print_current_mode(mode);
 }
 
 pub fn do_on_command_mode(mode: &mut Mode, buffer: &mut String) {
@@ -44,8 +44,8 @@ pub fn do_on_command_mode(mode: &mut Mode, buffer: &mut String) {
 
     //println!("Your command: {}", command);
     match command.trim() {
-        "h" | "help" => print_help(&mode),
-        "i" | "insert" => enter_insert_mode(&mut *mode),
+        "h" | "help" => print_help(mode),
+        "i" | "insert" => enter_insert_mode(mode),
         "w" | "write" => write_to_file(),
         "q" | "quit" => exit_app(),
         _ => println!("Command not recognized. Type \"h\" or \"help\" + Enter to display the full list."),
